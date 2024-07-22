@@ -1,4 +1,4 @@
-##Node.js, JS, Express 에 대해 알아보자.
+## Node.js, JS, Express 에 대해 알아보자.
 
 - Node.js는 브라우저에서만 동작하는 자바스크립트가 서버에서도 작동할 수 있도록 도와주는 '도구'이다.
 - Express는 Node.js의 프레임워크이다.
