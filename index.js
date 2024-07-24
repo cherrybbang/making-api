@@ -2,16 +2,18 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const app = express();
-const port = process.env.PORT || 3000;
+const app = express();  //인스턴스 생성
+const port = process.env.PORT || 3000;  //환경변수 설정
 
-app.use(bodyParser.json());  // JSON 현식의 데이터 파싱
+app.use(bodyParser.json());  // JSON 형식의 데이터 파싱
 app.use(bodyParser.urlencoded({extended : true}));  // URL-encoded 형식의 데이터 파싱
 
 app.get('/', (req, res) => {
     res.send('Welcome to the RESTful API server!');
 });
 
+// .listen() 원하는 포트에 서버를 오픈하는 문법
+// .listen(서버를 오픈할 포트번호, function() {서버 오픈시 실행할 코드})
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
