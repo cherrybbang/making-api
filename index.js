@@ -3,6 +3,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();  //인스턴스 생성
+
+// 환경변수의 PORT 가 없다면 3000을 기본으로 한다는 뜻
 const port = process.env.PORT || 3000;  //환경변수 설정
 
 app.use(bodyParser.json());  // JSON 형식의 데이터 파싱

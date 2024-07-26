@@ -6,3 +6,26 @@
 
 // require('dotenv').config() 선언을 통해 .env 파일의 환경변수를 로드하고 process.env 객체를 통해 해당 변수들에 접근할 수 있게 해준다.
 
+
+// 이렇게 하면 .env의 환경변수를 가져올 수 있다.
+// require('dotenv').config();
+// const appKey = process.env.APP_KEY;
+
+// console.log(appKey);
+
+
+// .env 파일을 로드하여 process.env에 환경변수를 설정합니다.
+require('dotenv').config();
+
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/api/data', (req, res) => {
+    const apiKey = process.env.API_KEY;
+    res.json({apiKey});
+});
+
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
